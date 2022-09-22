@@ -1,0 +1,520 @@
+x* {
+    margin : 0;
+    padding: 0;
+}
+
+body {
+    margin     : 0px 185px;
+    overflow-x : hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+nav {
+    display        : flex;
+    height         : 100px;
+    justify-content: space-around;
+    align-items    : center;
+}
+
+nav img {
+    width: 120px;
+}
+
+nav ul {
+    display        : flex;
+    width          : 40%;
+    margin-top     : 20px;
+    margin-left    : 300px;
+    list-style     : none;
+    justify-content: space-between;
+    align-items    : center;
+}
+
+nav ul li a {
+    color          : black;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color          : crimson;
+    text-decoration: none;
+}
+
+nav ul li button {
+    width        : 75px;
+    height       : 30px;
+    border       : none;
+    border-radius: 5px;
+    background   : crimson;
+    color        : white;
+    font-size    : 16px;
+    font-family  : 'Montserrat', sans-serif;
+    cursor       : pointer;
+}
+/* AkhirNavbar */
+
+/* Hamburger Menu */
+.menu-toggle {
+    display        : none;
+    flex-direction : column;
+    height         : 20px;
+    justify-content: space-between;
+    position       : relative;
+    z-index        : 999;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width   : 48px;
+    height  : 28px;
+    left    : -10px;
+    opacity : 0;
+    cursor  : pointer;
+    z-index : 2;
+}
+
+.menu-toggle span {
+    display         : block;
+    width           : 28px;
+    height          : 3px;
+    background-color: black;
+    border-radius   : 3px;
+    transition      : all 0.5s;
+}
+/* Akhir Hamburger Menu */
+
+/* Hamburger Menu Animasi */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: black;
+    transform       : rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: black;
+    transform       : rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity  : 0;
+    transform: scale(0);
+}
+/* Akhir Hamburger Menu Animasi */
+
+/* Responsive Breakpoint */
+/* ukuran tablet */
+@media (max-width: 1000px) {
+    nav ul {
+        width      : 50%;
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        width      : 70%;
+        margin-left: 10px;
+    }
+
+    nav img {
+        width: 70px;
+    }
+}
+
+/* ukuran mobile */
+@media (max-width: 650px) {
+    nav img {
+        width      : 70px;
+        margin-left: -20px;
+    }
+
+    .menu-toggle {
+        display    : flex;
+        margin-left: 70px;
+    }
+
+    nav ul {
+        position        : absolute;
+        margin          :  0px;
+        width           : 100%;
+        right           : 0;
+        top             : 0;
+        height          : 100vh;
+        flex-direction  : column;
+        background-color: crimson;
+        justify-content : space-evenly;
+        align-items     : center;
+        z-index         : 1;
+        transform       : translateY(-100%);
+        transition      : all 1s;
+        opacity         : 0;
+    }
+
+    nav ul.slide {
+        opacity  : 1;
+        transform: translateY(0);
+    }
+
+    nav ul li a {
+        color          : white;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        color          : black;
+        text-decoration: none;
+    }
+
+    nav ul li button {
+        color: white;
+    }
+
+    nav ul li button:hover {
+        color: black;
+    }
+}
+/* Akhir Responsive Breakpoint */
+
+/* Banner */
+.banner img {
+    width: 100%;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 650px) {
+    .banner img {
+        width      : 170%;
+        margin-left: -40px;
+    }
+}
+/* Akhir Banner */
+
+/* We Offer */
+.we-offer {
+    display        : grid;
+    justify-content: center;
+    align-items    : center;
+}
+
+.we-offer .title {
+    margin        : 15px 0px;
+    color         : #424242;
+    font-family   : 'Pacifico', cursive;
+    font-weight   : bold;
+    text-align    : center;
+    letter-spacing: 5px;
+}
+
+.we-offer .we-offer-2 p {
+    color: #424242;
+}
+
+.we-offer .we-offer-2 .menu {
+    display              : grid;
+    padding              : 20px 15px;
+    width                : 230px;
+    height               : 300px;
+    float                : left;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    text-align           : center;
+}
+
+.we-offer .we-offer-2 .menu img {
+    width : 180px;
+    height: 180px;
+    margin: auto;
+}
+/* Akhir We Offer */
+
+/* Kedai Pizza */
+.kedai-pizza {
+    display    : grid;
+    align-items: center;
+}
+
+.kedai-pizza .kedai-pizza-2 .logo img {
+    padding-right: 25px;
+    float        : left;
+    width        : 316px;
+    height       : 379px;
+}
+
+.kedai-pizza .kedai-pizza-2 .logo h1 {
+    padding       : 50px 0px 50px 360px;
+    color         : #576855;
+    font-weight   : bold;
+    font-size     : 34px;
+    letter-spacing: 5px;
+}
+
+.kedai-pizza .kedai-pizza-2 .logo span {
+    color      : #424242;
+    font-weight: bold;
+}
+
+.kedai-pizza .kedai-pizza-2 .logo p {
+    color    : #424242;
+    font-size: 13px;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 850px) {
+    .kedai-pizza {
+        justify-content: center;
+    }
+
+    .kedai-pizza .kedai-pizza-2 .logo img {
+        float: none;
+    }
+
+    .kedai-pizza .kedai-pizza-2 .logo h1 {
+        padding-left: 0px;
+    }
+}
+/* Akhir Kedai Pizza */
+
+/* Footer */
+.created {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width                : 100%;
+    padding              : 30px 0px;
+    text-align           : center;
+}
+
+.created a {
+    color          : crimson;
+    text-decoration: none;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 650px) {
+    hr {
+        margin-left: -110px;
+        width      : 300%;
+    }
+
+    .created {
+        justify-content: center;
+    }
+}
+/* Akhir Footer */
+
+/* aboutus */
+.bg-about-contact-register-login {
+    background-image: url(img/bg.png);
+}
+
+.about-us {
+    padding              : 60px 0px;
+    display              : grid;
+    grid-template-areas  : 
+    "title title"
+    "kedai-pizza kedai-pizza"
+    "visi-misi visi-misi";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows   : 0.2fr 1fr 1fr;
+    text-align           : center;
+}
+
+.about-us .title {
+    grid-area: title;
+    padding  : 10px 0px;
+}
+
+.about-us .kedai-pizza {
+    grid-area: kedai-pizza;
+    padding  : 20px 0px;
+}
+
+.about-us .visi-misi {
+    grid-area: visi-misi;
+    padding  : 20px 0px;
+}
+
+/*about-us, contact-us*/
+.about-us h1, .contact-us h1 {
+	letter-spacing: 10px;
+    color         : #576855;
+    font-weight   : bold;
+}
+
+.about-us p {
+    text-align: justify;
+} 
+/* Akhir aboutus */
+
+/* contact */
+.contact-us {
+    padding              : 100px 0px;
+    display              : grid;
+    grid-template-areas  : 
+    "title"
+    "info";
+    grid-template-columns: 1fr;
+    grid-template-rows   : 0.2fr 1fr;
+    text-align           : center;
+}
+
+.contact-us .title {
+    grid-area: title;
+    padding  : 10px 0px;
+}
+
+.contact-us .info {
+    grid-area : info;
+    padding   : 20px 0px;
+    text-align: justify;
+}
+/* Akhir contact */
+
+/* Register */
+.register {
+    position     : relative;
+    top          : 100px;
+    padding      : 30px;
+    margin       : auto;
+    width        : 300px;
+    max-height   : 390px;
+    background   : white;
+    box-shadow   : 0px -1px 9px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.register .icon-logo {
+    display: flex;
+    width  : 50%;
+	margin : auto;
+}
+
+.register .tengah {
+    padding   : 20px 0px;
+    text-align: center;
+}
+
+.register .register-2 {
+    color      : #31353BF5;
+    font-size  : 20px;
+    font-weight: bold;
+}
+
+.register a {
+    color          : crimson;
+    text-decoration: none;
+    font-size      : 16px;
+}
+
+.register .sudahpunyaakun, label {
+    color    : #31353BAD;
+    font-size: 16px;
+}
+
+.register input {
+    margin       : 10px 0px;
+    width        : 100%;
+    height       : 40px;
+    border-radius: 8px;
+    border       : 1px solid #00000061; 
+}
+
+.register .btn-register {
+    margin          : 10px 0px;
+    width           : 100%;
+    height          : 40px;
+    border-radius   : 10px;
+    border          : none;
+    background-color: crimson;
+    color           : white;
+    font-size       : 16px;
+    font-family     : 'Montserrat', sans-serif;
+    cursor          : pointer;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 650px) {
+    .register {
+        position     : relative;
+        top          : 100px;
+        padding      : 30px;
+        /*margin       : auto;*/
+        width        : 300px;
+        max-height   : 390px;
+        background   : white;
+        box-shadow   : 0px -1px 9px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+}
+
+/* Akhir Register */
+
+/* Login */
+.login {
+    position     : relative;
+    top          : 100px;
+    padding      : 30px;
+    margin       : auto;
+    width        : 300px;
+    max-height   : 390px;
+    background   : white;
+    box-shadow   : 0px -1px 9px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login .icon-logo {
+    display: flex;
+    width  : 50%;
+	margin : auto;
+}
+
+.login .tengah {
+    padding        : 20px 0px;
+    display        : flex;
+    justify-content: space-between;
+}
+
+.login .login-2 {
+    color      : #31353BF5;
+    font-size  : 20px;
+    font-weight: bold;
+}
+
+.login a {
+    color          : crimson;
+    text-decoration: none;
+    font-size      : 16px;
+}
+
+.login .sudahpunyaakun, label {
+    color    : #31353BAD;
+    font-size: 16px;
+}
+
+.login input {
+    margin       : 10px 0px;
+    width        : 100%;
+    height       : 40px;
+    border-radius: 8px;
+    border       : 1px solid #00000061; 
+}
+
+.login .btn-login {
+    margin          : 10px 0px;
+    width           : 100%;
+    height          : 40px;
+    border-radius   : 10px;
+    border          : none;
+    background-color: crimson;
+    color           : white;
+    font-size       : 16px;
+    font-family     : 'Montserrat', sans-serif;
+    cursor          : pointer;
+}
+/* Akhir Login */
